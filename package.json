@@ -1,0 +1,35 @@
+{
+  "name": "tiny-nodejs-service-starter",
+  "version": "1.0.0",
+  "description": "Tiny Node.JS service starter kit",
+  "license": "WTFPL",
+  "author": "Gabriel Montes <gabriel@utoctadel.com.ar>",
+  "main": "src/index.js",
+  "repository": "gabmontes/tiny-nodejs-service-starter",
+  "scripts": {
+    "lint": "eslint --cache .",
+    "precommit": "npm run lint",
+    "test": "mocha",
+    "coverage": "nyc --reporter=lcov --reporter=text npm test",
+    "prepush": "npm test",
+    "check": "npm-check -p",
+    "prepublish": "npm run lint && npm run check && npm test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.0.0",
+    "eslint": "^4.1.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^6.0.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.3",
+    "mocha": "^5.0.1",
+    "npm-check": "^5.5.2",
+    "nyc": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
